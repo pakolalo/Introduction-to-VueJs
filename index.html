@@ -14,10 +14,11 @@
         const vm = Vue.createApp({
             data() {
                 return{
-                    text:'<p>Hola Mundo</p>'
+                    text:'Hola Mundo',
+                    img: 'https://assets.aboutamazon.com/dims4/default/24bb948/2147483647/strip/true/crop/1999x1125+1+0/resize/1860x1047!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F57%2Fd5%2Febb22a7348ae838ef0c07c730dad%2Fyankees-hero-2000x1125.jpg'
                 };
             },
-            template:`<div v-once v-html="text"></div>`
+            template: `<img v-bind:src="img" v-bind:alt="img">`,
         }).mount("#app");
     </script>
 </body>
